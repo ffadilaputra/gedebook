@@ -1,0 +1,23 @@
+{
+  "name": "boo",
+  "authors": [
+    "ffadilaputra <sfkikuk@gmail.com>"
+  ],
+  "description": "CI Quickstart",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "emoji-css": "^1.0.2",
+    "bootstrap-datepicker": "^1.6.4"
+  }
+}
