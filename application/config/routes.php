@@ -7,5 +7,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 //Custom Route Disini
 
-$route['login'] = 'user/login';
-$route['register'] = 'user/register';
+$route['login'] = 'auth/login';
+$route['register'] = 'auth/register';
