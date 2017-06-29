@@ -13,20 +13,15 @@ class User_model extends CI_Model {
 				'password' => md5($this->input->post('password')),
 				'role' => 'user',
 			);
-
 			$this->db->insert('pengguna',$data);
-
 		}
 
 		public function login($username,$password){
-
-		$this->db->select('id_pengguna','username','password');
-		$this->db->from('pengguna');
+		//$this->db->select('id_pengguna','username','password');
+		//$this->db->from('pengguna');
 		$this->db->where('username',$username);
 		$this->db->where('password',md5($password));
-
-		$query = $this->db->get();
-
+		$query = $this->db->get('pengguna');
 		if ($query->num_rows() == 1) {
 			return $query->result();
 		}else{

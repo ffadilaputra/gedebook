@@ -1,8 +1,5 @@
-<?php $this->load->view('partials/header') ?>
 <div class="ui container">
-
 <h1></h1>
-
 <div class="ui four cards">
     <div class="ui card visible">
     <div class="image dimmable">

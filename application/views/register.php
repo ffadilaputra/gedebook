@@ -4,32 +4,30 @@
 
 <div class="ui middle">
     <div class="ui container">
-      <h1>Register </h1>
+      <h1>Register</h1>
       <br>
     </div>
 </div>
 
 <div class="ui middle">
     <div class="ui container">
-      <!-- <form class="ui form"> -->
       <?php
       $attr = array('class' => 'ui form');
       echo form_open('Auth/register',$attr); 
       ?>
-
         <div class="field">
           <label>Nama</label>
-          <input type="text" name="fullname" placeholder="First Name">
+          <input type="text" name="fullname" placeholder="Fullname">
         </div>
         <div class="field">
           <label>Email</label>
-          <input type="text" name="email" placeholder="Last Name">
+          <input type="text" name="email" placeholder="Email">
         </div>
         <div class="field">
           <label>Gender</label>
         <div class="field">
         <select name="gender" class="ui fluid search dropdown">
-          <option value="">-- Choose --</option>
+          <option value="0">-- Choose --</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select>

@@ -6,7 +6,7 @@
 		
 		<?php 
 			$attr = array('class' => 'ui form');
-      		echo form_open('Auth/login',$attr);  
+      		echo form_open('auth/login',$attr);  
 		?>
 		<?php echo validation_errors(); ?>
 			<div class="field">
