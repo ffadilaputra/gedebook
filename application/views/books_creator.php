@@ -22,7 +22,7 @@
 					<?= $key->sinopsis ?>
 				</div>
 				<div class="extra">
-					<img src="<?php echo base_url('assets/img/square-image.png') ?>" class="ui circular avatar image"><?php echo $session_data['nama']; ?>
+					<img src="<?php echo base_url('assets/uploads') ?>/<?= $session_data['ava']; ?>" class="ui circular avatar image"><?php echo $session_data['nama']; ?>
 					<div class="ui right floated">
 						<a href="" class="ui primary button">Edit</a>
 						<a href="" class="ui primary button">Delete</a>

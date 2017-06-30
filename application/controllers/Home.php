@@ -3,6 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Books_model');
+        $this->load->helper('text');
+    }
+
     public function index(){
 
         //Handle Header 
@@ -16,8 +23,15 @@ class Home extends CI_Controller {
     	}else{
     		$this->load->view('partials/header');
     	}
-	       	$this->load->view('home');
+	       	
+
+        $data['book'] = $this->Books_model->bookAll();
+        $this->load->view('home', $data);    
+
+
     }
+
+
 
 }
 

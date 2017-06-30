@@ -4,7 +4,11 @@
 			$(function(){
 				$('select.dropdown')
   				.dropdown();
+  				$("a").click(function(){
+  					$('.ui.basic.modal').modal('show');
+				});
 			});
+
 		</script>
 </body>
 </html>
