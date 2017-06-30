@@ -1,4 +1,9 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<?php 
+$session_data = $this->session->userdata('logged_in');
+$data['username'] = $session_data['username'];
+$data['ava'] = $session_data['ava']; 
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,17 +20,19 @@
                 <a class="item">
                     <i class="grid layout icon"></i> Browse
                 </a>
-                <a class="item">
-                    <i class="book icon"></i> Book
+                <a href="<?php echo base_url('books') ?>" class="item">
+                    <i class="book icon"></i>Your Book
                 </a>
                 <div class="right item">
-                    <a class="ui button primary" href="">Create a Review</a>
+                    <a class="ui button primary" href="<?php echo base_url('books/create') ?>">Publish Your Book</a>
                     <div class="ui simple dropdown item">
-                        Profile
+                        <img class="ui avatar image" src="<?php echo base_url('assets/uploads') ?>/<?= $session_data['ava']; ?>">
+                        Hello,<span><?= $session_data['username']; ?></span>
                         <i class="dropdown icon"></i>
                         <div class="menu">
-                            <a class="item"><i class="edit icon"></i> Edit Profile</a>
-                            <a href="auth/logout" class="item"><i class="settings icon"></i> Logout</a>
+                            <a href="<?php echo base_url('writer/profile') ?>" class="item"><i class="edit icon"></i> Edit Profile</a>
+                            <a href="<?php echo base_url('auth/logout') 
+                            ?>" class="item"><i class="settings icon"></i> Logout</a>
                         </div>
                     </div>
                 </div>

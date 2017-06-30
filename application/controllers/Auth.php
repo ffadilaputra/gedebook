@@ -38,7 +38,7 @@ class Auth extends CI_Controller
 				$session_data = $this->session->userdata('logged_in');
 					if ($session_data['role'] == 'user') {
 						redirect('user','refresh');
-					}elseif($session_data['role'] == 'penulis'){
+					}elseif($session_data['role'] == 'writer'){
 						redirect('writer','refresh');
 					}//Penutub Else IF
 			}//Penutub if Pertama
@@ -56,6 +56,8 @@ class Auth extends CI_Controller
 				$sess = array(
 					'id_pengguna' => $row->id_pengguna,
 					'username' => $row->username,
+					'ava' => $row->ava,
+					'nama' => $row->nama,
 					'role' => $row->role
 				 );
 				$this->session->set_userdata('logged_in',$sess);

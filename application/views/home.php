@@ -1,32 +1,57 @@
+<h3 class="ui center aligned header"></h3>
+
 <div class="ui container">
-<h1></h1>
-<div class="ui four cards">
-    <div class="ui card visible">
-    <div class="image dimmable">
-      <div class="ui blurring inverted dimmer transition hidden">
-        <div class="content">
-          <div class="center">
-            <div class="ui teal button">Add Friend</div>
-          </div>
-        </div>
-      </div>
-      <img src="<?= base_url('assets/img/image.png')  ?>">
+
+<div class="ui segments">
+    <div class="ui segment">Search</div>
+  </div>
+
+<div class="ui segments">
+    <div class="ui segment">
+      <div class="ui card">
+  <div class="content">
+    <div class="right floated meta">14h</div>
+    <img class="ui avatar image" src="<?php echo base_url('assets/img/square-image.png') ?>"> Elliot
+  </div>
+  <div class="image">
+    <img src="<?php echo base_url('assets/img/image.png') ?>">
+  </div>
+  <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      17 likes
+    </span>
+    <i class="comment icon"></i>
+    3 comments
+  </div>
+  
+</div>
     </div>
-    <div class="content">
-      <div class="header">Title</div>
-      <div class="meta">
-        <a class="group">Meta</a>
+  </div>
+
+<div class="ui stackable two column divided grid">
+  <div class="row">
+    <div class="column">
+      <div class="ui segment">
+        <div class="ui secondary vertical pointing menu">
+  <a class="item active">
+    Home
+  </a>
+  <a class="item">
+    Messages
+  </a>
+  <a class="item">
+    Friends
+  </a>
+</div>
       </div>
-      <div class="description">One or two sentence description that may go to several lines</div>
     </div>
-    <div class="extra content">
-      <a class="right floated created">Comments</a>
-        <a class="friends">
-            <i class="heart icon"></i>2
-        </a>
+    <div class="column">
+      <div class="ui segment">Content</div>
     </div>
   </div>
 </div>
 
+</div>
 
 <?php $this->load->view('partials/footer') ?>

@@ -32,6 +32,7 @@
           <option value="female">Female</option>
         </select>
         </div>
+
         <div class="field">
           <label>Username</label>
           <input type="text" name="username" placeholder="Username">
@@ -41,12 +42,21 @@
           <input type="password" name="password" placeholder="Password">
         </div>
       </div>
+
+      <div class="field">
+      <label>Choose Role</label>
+        <select name="role" class="ui fluid search dropdown">
+          <option value="0">-- Choose --</option>
+          <option value="writer">Writer</option>
+          <option value="user">User</option>
+        </select>
+        </div>
+
         <button class="ui button primary" type="submit">Submit</button>
-        
         <div class="ui pink message"><?php echo validation_errors(); ?></div>
         <br>
 
-<?php echo form_close() ?>
+      <?php echo form_close() ?>
     </div>
 </div>
 
