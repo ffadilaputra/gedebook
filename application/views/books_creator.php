@@ -1,19 +1,23 @@
-<?php 
-	$this->load->view('partials/header-penulis'); 
+<?php
+	$this->load->view('partials/header-penulis');
 	$session_data = $this->session->userdata('logged_in');
 ?>
 <h3 class="ui center aligned header">Your Books</h3>
 <div class="ui container">
 	<div class="ui relaxed divided items">
-	<?php foreach ($buku as $key ): ?>
+		<?php foreach ($buku as $key ): ?>
 		<div class="item">
 			<div class="ui small image">
-				<img src="<?php echo base_url('assets/img/image.png') ?>">
+				<?php if ($key->img == 'NULL' || $key->img == ''): ?>
+				<img class="hoverZoomLink" src="<?= base_url('assets/img/image.png') ?>">
+				<?php else: ?>
+				<img class="hoverZoomLink" src="<?= base_url('assets/uploads') ?>/<?= $key->img ?>">
+				<?php endif ?>
 			</div>
 			<div class="content">
 				<a class="header"><?= $key->judul ?></a>
 				<div class="meta">
-					<?php 
+					<?php
 						//$test = implode(array($key->genre));
 						echo $key->genre
 					?>
@@ -30,7 +34,7 @@
 				</div>
 			</div>
 		</div>
-	<?php endforeach; ?>
+		<?php endforeach; ?>
 	</div>
 </div>
 <?php $this->load->view('partials/footer'); ?>

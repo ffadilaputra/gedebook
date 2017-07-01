@@ -46,6 +46,7 @@ class User_model extends CI_Model {
 				'email' => $this->input->post('email'),
 				'jk' => $this->input->post('gender'),
 				'ava' => $this->upload->data('file_name'),
+				'thumb' => $this->upload->data('image_width'),
 				'username' => $this->input->post('username'),
 				'password' => md5($this->input->post('password')),
 				'role' => 'writer',

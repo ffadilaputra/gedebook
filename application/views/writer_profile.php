@@ -36,7 +36,7 @@
         </div>
         <div class="field">
         <label>Ava Image</label>
-        	<input type="file" name="ava" placeholder="Image" value="" size="20">
+        	<input type="file" name="ava" placeholder="Image">
         </div>
         <div class="field">
           <label>Username</label>

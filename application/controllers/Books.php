@@ -43,9 +43,41 @@ class Books extends CI_Controller
 		if ($this->form_validation->run() === FALSE) {
 			$this->load->view('book_cr');
 		}else {
-			$this->Books_model->publish();
+			//$this->Books_model->publish();
+
+			$config['upload_path'] = 'assets/uploads';
+			$config['allowed_types'] = 'gif|jpg|png';
+        	$config['max_size'] = '1000000000';
+
+        	$this->load->library('upload', $config);
+
+        	if(!$this->upload->do_upload('image')){
+        		$err = array('error' => $this->upload->display_errors());
+        		var_dump($err); // Tampil Error Ketika gambar gagal simpan
+        		var_dump($_POST);
+        	}else{
+
+	        $image_data = $this->upload->data();	
+				// Resize Image Here :)
+			$config['image_library']  = 'gd2';
+	  		$config['source_image']   = $image_data['full_path']; //get original image
+	  		$config['maintain_ratio'] = TRUE;
+	  		$config['create_thumb']   = TRUE;
+	 		$config['width']          = 237;
+			$config['height']         = 196;
+			$config['new_image']      = 'assets/uploads/cropped';
+
+			$this->load->library('image_lib', $config);
+			
+			$this->image_lib->initialize($config);
+			$this->image_lib->resize();
+        	
+        	$this->Books_model->publish();
+        	redirect('books','refresh');
+        	}
+
 			// redirect('books','refresh');
-			var_dump($_POST);
+			// var_dump($_POST);
 		}
 		
 

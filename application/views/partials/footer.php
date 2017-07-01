@@ -2,10 +2,12 @@
 		<script src="<?php echo base_url('semantic/dist/semantic.min.js') ?>"></script>
 		<script type="text/javascript">
 			$(function(){
-				$('select.dropdown')
-  				.dropdown();
+				$('select.dropdown').dropdown();
   				$("a").click(function(){
   					$('.ui.basic.modal').modal('show');
+				});
+				$('.ui.card .image').dimmer({
+  					on: 'hover'
 				});
 			});
 

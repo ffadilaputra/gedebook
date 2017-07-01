@@ -9,6 +9,7 @@ class Books_model extends CI_Model{
 		$data = array(
 			'judul' => $this->input->post('title'),
 			'penulis' => $this->input->post('writer'),
+			'img' => $this->upload->data('file_name'),
 			'penerbit' => $this->input->post('publisher'),
 			'genre' => $arr_genre,
 			'sinopsis' => $this->input->post('synopsys'),
