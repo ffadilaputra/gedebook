@@ -14,9 +14,9 @@ class Books extends CI_Controller
             $data['nama'] = $session_data['nama'];
             $data['role'] = $session_data['role'];
 
-            if ($session_data['role'] != 'writer') {
+        if ($session_data['role'] != 'writer') {
             	redirect('user','refresh');
-            }
+		}
 
         }else{
             redirect('login','refresh');
@@ -25,8 +25,8 @@ class Books extends CI_Controller
 	}
 
 
-	public function index()
-	{
+	public function index()	{
+
 		$session_data = $this->session->userdata('logged_in');
 		$data['buku'] = $this->Books_model->bookById($session_data['id_pengguna']);
 		$this->load->view('books_creator',$data);

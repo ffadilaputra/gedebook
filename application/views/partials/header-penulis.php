@@ -30,7 +30,7 @@ $data['ava'] = $session_data['ava'];
                         Hello,<span><?= $session_data['username']; ?></span>
                         <i class="dropdown icon"></i>
                         <div class="menu">
-                            <a href="<?php echo base_url('writer/profile') ?>" class="item"><i class="user icon"></i> Edit Profile</a>
+                            <a href="<?php echo base_url('writer/profile') ?>" class="item"><i class="edit icon"></i> Edit Profile</a>
                             <a class="item"><i class="settings icon"></i> Logout</a>
                             <!-- Modal -->
                             <div class="ui basic modal">
@@ -46,11 +46,8 @@ $data['ava'] = $session_data['ava'];
                                     <div class="ui red basic cancel inverted button">
                                         <i class="remove icon"></i>
                                         No
-                                    </div>
-                                    <div class="ui green ok inverted button">
-                                        <i class="checkmark icon"></i>
-                                        <a href="<?php echo base_url('auth/logout') ?>">Logout</a>
-                                    </div>
+                                    </div>        
+                                        <a class="ui green ok inverted button" href="<?php echo base_url('auth/logout') ?>"><i class="checkmark icon"></i>Logout</a>
                                 </div>
                             </div>
                         </div>

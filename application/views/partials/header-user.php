@@ -45,10 +45,7 @@ $data['ava'] = $session_data['ava'];
                                         <i class="remove icon"></i>
                                         No
                                     </div>
-                                    <div class="ui green ok inverted button">
-                                        <i class="checkmark icon"></i>
-                                        <a href="<?php echo base_url('auth/logout') ?>">Logout</a>
-                                    </div>
+                                     <a class="ui green ok inverted button" href="<?php echo base_url('auth/logout') ?>"><i class="checkmark icon"></i>Logout</a>
                                 </div>
                             </div>
                         </div>

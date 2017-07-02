@@ -37,7 +37,7 @@ class Auth extends CI_Controller
 			if ($this->session->userdata('logged_in')) {
 				$session_data = $this->session->userdata('logged_in');
 					if ($session_data['role'] == 'user') {
-						redirect('user','refresh');
+						redirect('home','refresh');
 					}elseif($session_data['role'] == 'writer'){
 						redirect('writer','refresh');
 					}//Penutub Else IF
