@@ -75,9 +75,6 @@ class Books extends CI_Controller
         	$this->Books_model->publish();
         	redirect('books','refresh');
         	}
-
-			// redirect('books','refresh');
-			// var_dump($_POST);
 		}
 		
 

@@ -17,10 +17,7 @@
 			<div class="content">
 				<a class="header"><?= $key->judul ?></a>
 				<div class="meta">
-					<?php
-						//$test = implode(array($key->genre));
-						echo $key->genre
-					?>
+					<?=	$key->genre ?>
 				</div>
 				<div class="description">
 					<?= $key->sinopsis ?>

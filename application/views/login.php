@@ -2,8 +2,11 @@
 <br>
 <div class="ui middle">
 	<div class="ui container">
-		<h1>Login</h1>
-		
+		<div class="ui three column stackable grid">
+			<div class="column">
+			</div>		
+			<div class="column">
+				<h1>Login</h1>
 		<?php 
 			$attr = array('class' => 'ui form');
       		echo form_open('auth/login',$attr);  
@@ -21,9 +24,9 @@
 				<input type="submit" class="ui button primary">
 				<input type="reset" class="ui button">
 			</div>
-		<?php echo form_close() ?>
-
+		<?php echo form_close() ?>		
+			</div>
+		</div>
 	</div>
 </div>
-
 <?php $this->load->view('partials/footer') ?>

@@ -20,6 +20,10 @@ class User extends CI_Controller
 
 	}
 
+	public function books(){
+		$this->load->view('detail_book');
+	}
+
 	public function profile(){
 
 		$this->load->model('User_model');

@@ -1,8 +1,8 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-<?php 
+<?php
 $session_data = $this->session->userdata('logged_in');
 $data['username'] = $session_data['username'];
-$data['ava'] = $session_data['ava']; 
+$data['ava'] = $session_data['ava'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +14,9 @@ $data['ava'] = $session_data['ava'];
     <body>
         <div class="ui attached stackable menu">
             <div class="ui container">
+                <a class="item" href="<?= base_url() ?>">
+                    <b>Gedebook :)</b>
+                </a>
                 <a href="<?= base_url()  ?>" class="item">
                     <i class="home icon"></i> Home
                 </a>
@@ -36,16 +39,16 @@ $data['ava'] = $session_data['ava'];
                                     Are you sure to logout ?
                                 </div>
                                 <div class="content">
-                                <center>
+                                    <center>
                                     <img class="ui small circular" src="<?php echo base_url('assets/img/logout.png') ?>">
-                                </center>
+                                    </center>
                                 </div>
                                 <div class="actions">
                                     <div class="ui red basic cancel inverted button">
                                         <i class="remove icon"></i>
                                         No
                                     </div>
-                                     <a class="ui green ok inverted button" href="<?php echo base_url('auth/logout') ?>"><i class="checkmark icon"></i>Logout</a>
+                                    <a class="ui green ok inverted button" href="<?php echo base_url('auth/logout') ?>"><i class="checkmark icon"></i>Logout</a>
                                 </div>
                             </div>
                         </div>
