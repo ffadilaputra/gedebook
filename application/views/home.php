@@ -44,7 +44,6 @@
         </a>
       </div>
       <!-- abel  -->
-
       <!-- writer -->
       <h3>Top Writer</h3>
       <a class="ui image label">

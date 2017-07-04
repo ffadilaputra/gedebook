@@ -10,13 +10,14 @@ class Books extends CI_Controller
 
 		if ($this->session->userdata('logged_in')) {
             $session_data = $this->session->userdata('logged_in');
+            $data['username'] = $session_data['id_pengguna'];
             $data['username'] = $session_data['username'];
             $data['nama'] = $session_data['nama'];
             $data['role'] = $session_data['role'];
 
-        if ($session_data['role'] != 'writer') {
-            	redirect('user','refresh');
-		}
+  //       if ($session_data['role'] != 'writer') {
+  //           	redirect('user','refresh');
+		// }
 
         }else{
             redirect('login','refresh');
@@ -28,11 +29,24 @@ class Books extends CI_Controller
 	public function index()	{
 
 		$session_data = $this->session->userdata('logged_in');
+		$data['role'] = $session_data['role'];
+
+		if ($session_data['role'] != 'writer') { //Ini buat handle biar penulis doang yang bisa akses
+            	redirect('user','refresh');
+		}
+
 		$data['buku'] = $this->Books_model->bookById($session_data['id_pengguna']);
 		$this->load->view('books_creator',$data);
 	}
 
 	public function create(){
+
+		$session_data = $this->session->userdata('logged_in');
+		$data['role'] = $session_data['role'];
+
+		if ($session_data['role'] != 'writer') { //Ini buat handle biar penulis doang yang bisa akses
+            	redirect('user','refresh');
+		}
 
 		$this->form_validation->set_rules('title','title','trim|required');
 		$this->form_validation->set_rules('writer','writer','trim|required');
@@ -76,9 +90,13 @@ class Books extends CI_Controller
         	redirect('books','refresh');
         	}
 		}
-		
+	}
 
+	public function details($id){
 
+		$data['book'] = $this->Books_model->detailById($id);
+
+		$this->load->view('detail_book',$data);
 	}
 
 }
