@@ -69,7 +69,7 @@
               <div class="ui dimmer transition hidden">
                 <div class="content">
                   <div class="center">
-                    <a class="ui inverted button">Read More</a>
+                    <a href="<?= base_url('books/details') ?>/<?= $key->kd_buku ?>" class="ui inverted button">Read More</a>
                   </div>
                 </div>
               </div>
