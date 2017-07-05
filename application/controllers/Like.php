@@ -8,7 +8,7 @@ class Like extends CI_Controller{
 
 		$this->load->model('Like_model');
 		$this->Like_model->put_like();
-		redirect('books','refresh');
+		redirect('home','refresh');
 	}
 
 	

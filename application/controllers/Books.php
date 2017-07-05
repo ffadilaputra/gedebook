@@ -7,6 +7,7 @@ class Books extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('Books_model');
+		$this->load->model('Like_model');
 
 		if ($this->session->userdata('logged_in')) {
             $session_data = $this->session->userdata('logged_in');
@@ -94,6 +95,8 @@ class Books extends CI_Controller
 
 	public function details($id){
 
+		$data['filter'] = $this->Like_model->filter($id);
+		$data['like'] = $this->Like_model->count_like($id);
 		$data['book'] = $this->Books_model->detailById($id);
 
 		$this->load->view('detail_book',$data);
