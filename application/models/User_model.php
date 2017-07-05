@@ -1,6 +1,11 @@
 <?php 
 
 class User_model extends CI_Model {
+
+		public function getWriter(){
+			$uery = $this->db->get_where('pengguna', array('role' => 'writer'));
+			return $uery->result();
+		}
 		
 		public function register(){
 
@@ -48,7 +53,7 @@ class User_model extends CI_Model {
 				'ava' => $this->upload->data('file_name'),
 				'username' => $this->input->post('username'),
 				'password' => md5($this->input->post('password')),
-				'role' => $this->input->post('role'),
+				'role' => 'writer',
 			);
 
 			$this->db->where('id_pengguna',$id);

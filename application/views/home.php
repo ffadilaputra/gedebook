@@ -45,19 +45,13 @@
       </div>
       <!-- abel  -->
       <!-- writer -->
-      <h3>Top Writer</h3>
+      <h3>Writer</h3>
+     <?php foreach($uwer as $a): ?>
       <a class="ui image label">
-        <img src="<?= base_url('assets/img/image.png') ?>" class="hoverZoomLink">
-        Joe
+        <img src="<?= base_url('assets/uploads') ?>/<?= $a->ava ?>" class="hoverZoomLink">
+        <?= $a->nama ?>
       </a>
-      <a class="ui image label">
-        <img src="<?= base_url('assets/img/image.png') ?>" class="hoverZoomLink">
-        Elliot
-      </a>
-      <a class="ui image label">
-        <img src="<?= base_url('assets/img/image.png') ?>" class="hoverZoomLink">
-        Stevie
-      </a>
+      <?php endforeach; ?>  
       <!-- writer -->
     </div>
     <div class="eleven wide column">
@@ -84,10 +78,10 @@
               <div class="meta">
                 <a class="group"><?= $key->genre ?></a>
               </div>
-              <!--  <div class="description"><?= word_limiter($key->sinopsis, 10);  ?></div> -->
+              
             </div>
             <div class="content">
-              <img class="ui avatar image" src="<?php echo base_url('assets/img/square-image.png') ?>"> <?= $key->penulis ?>
+              <img class="ui avatar image" src="<?= base_url('assets/uploads') ?>/<?= $key->ava ?>"> <?= $key->penulis ?>
             </div>
           </div>
         </div>

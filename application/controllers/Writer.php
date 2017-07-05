@@ -1,5 +1,7 @@
 <?php 
 
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 class Writer extends CI_Controller
 {
 
@@ -21,7 +23,7 @@ class Writer extends CI_Controller
 	}
 
 	public function index(){
-		$this->load->view('partials/header-penulis');
+		//$this->load->view('partials/header-penulis');
 	}
 
 	public function profile(){
@@ -64,7 +66,7 @@ class Writer extends CI_Controller
             	unlink($path . $file); //Menghapus gambar yang akan diganti dengan gmbr baru
 
         		$this->User_model->update($id); //Proses Update
-        		redirect('writer','refresh');
+        		redirect('home','refresh');
         	}
 
 		}

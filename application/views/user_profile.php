@@ -47,12 +47,6 @@
           <input type="password" name="password" placeholder="Password" value="">
         </div>
       </div>
-
-      <div class="field">
-      <label>Choose Role</label>
-       <input name="role" type="text" placeholder="Password" value="<?php echo $profile[0]->role ?>" readonly>
-        </div>
-
         <button class="ui button primary" type="submit">Submit</button>
         <div class="ui pink message"><?php echo validation_errors(); ?></div>
         <br>

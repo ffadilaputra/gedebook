@@ -1,4 +1,4 @@
-<?php  
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Auth extends CI_Controller
 {
@@ -39,7 +39,7 @@ class Auth extends CI_Controller
 					if ($session_data['role'] == 'user') {
 						redirect('home','refresh');
 					}elseif($session_data['role'] == 'writer'){
-						redirect('writer','refresh');
+						redirect('home','refresh');
 					}//Penutub Else IF
 			}//Penutub if Pertama
 		}

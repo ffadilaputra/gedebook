@@ -1,5 +1,7 @@
 <?php 
 
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 class User extends CI_Controller
 {
 	
@@ -73,7 +75,7 @@ class User extends CI_Controller
             	unlink($path . $file); //Menghapus gambar yang akan diganti dengan gmbr baru
 
         		$this->User_model->update($id); //Proses Update
-        		redirect('user','refresh');
+        		redirect('home','refresh');
         	}
 
 		}

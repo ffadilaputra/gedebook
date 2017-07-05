@@ -1,5 +1,7 @@
 <?php 
 
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 class Like extends CI_Controller{
 
 	public function index(){
@@ -7,6 +9,8 @@ class Like extends CI_Controller{
 		$this->load->model('Like_model');
 		$this->Like_model->put_like();
 		redirect('books','refresh');
-
 	}
+
+	
+
 }
