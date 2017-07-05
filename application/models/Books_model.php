@@ -18,7 +18,7 @@ class Books_model extends CI_Model{
 	}
 
 	public function bookAll(){
-
+		
 		$this->db->select('*');
 		$this->db->from('buku');
 		$this->db->join('pengguna','pengguna.id_pengguna = buku.posted_by','left');
