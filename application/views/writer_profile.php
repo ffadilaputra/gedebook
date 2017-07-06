@@ -50,7 +50,7 @@
 
       <div class="field">
       <label>Choose Role</label>
-       <input type="text" placeholder="Password" value="<?php echo $profile[0]->role ?>" readonly>
+       <input name="role" type="text" placeholder="Role" value="<?php echo $profile[0]->role ?>" readonly>
         </div>
 
         <button class="ui button primary" type="submit">Submit</button>

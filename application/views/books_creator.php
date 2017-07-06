@@ -25,8 +25,9 @@
 				<div class="extra">
 					<img src="<?php echo base_url('assets/uploads') ?>/<?= $session_data['ava']; ?>" class="ui circular avatar image"><?php echo $session_data['nama']; ?>
 					<div class="ui right floated">
-						<a href="" class="ui primary button">Edit</a>
-						<a href="" class="ui primary button">Delete</a>
+						<a href="<?php echo base_url('index.php/books/update'); ?>/<?php echo $key->kd_buku; ?>" class="ui primary button">Edit</a>
+
+						<a href="<?php echo base_url('index.php/books/delete'); ?>/<?php echo $key->kd_buku; ?>" class="ui primary button">Delete</a>
 					</div>
 				</div>
 			</div>
