@@ -22,7 +22,10 @@
 			</div>
 			<p></p>
 			
-			<!-- Proses Like -->
+			<?php if($filter[0]->id_pengguna == $session_data['id_pengguna'] ): ?>
+				UNLIKE
+			<?php else: ?>
+				<!-- Proses Like -->
 			<?= form_open('like') ?>
 			<div class="ui labeled button" tabindex="0">
 				<input type="hidden" value="<?= $book[0]->kd_buku ?>" name="kd_buku">
@@ -36,6 +39,8 @@
 			</div>
 			<?= form_close() ?>
 			<!-- Proses Like -->
+			<?php endif; ?>	
+
 			<!-- abel  -->
 			<h3> Book Category </h3>
 			<div class="ui blue labels">

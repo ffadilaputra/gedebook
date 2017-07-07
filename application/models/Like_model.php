@@ -14,16 +14,19 @@ class Like_model extends CI_Model {
  	}
 
  	public function filter($id_bulu){
-	
+		
+		$this->db->select('*');
+		$this->db->from('like');
 		$this->db->where('fk_buku',$id_bulu);
 		$this->db->where('flag','1');
-		$query = $this->db->get('like');
-				
-			if($query->num_rows() == 1){
-					return $query->result();
-				}else{
-					return false;
-			}
+		$query = $this->db->get();
+
+		if($query->num_rows() == 1){
+			return $query->result();
+		}else{
+			return false;
+		}
+
 	}
 
  	public function count_like($id_bulu){
