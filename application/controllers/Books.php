@@ -149,12 +149,12 @@ class Books extends CI_Controller
 				$config['new_image']      = 'assets/uploads/cropped';
 
 			$this->load->library('image_lib', $config);
-			
+			$this->image_lib->clear();
 			$this->image_lib->initialize($config);
 			$this->image_lib->resize();
         	
-        	$this->Books_model->UpdateById();
-        	redirect('books','refresh');
+        	$this->Books_model->UpdateById($id);
+        	redirect('home','refresh');
         	}
 		}
 	}

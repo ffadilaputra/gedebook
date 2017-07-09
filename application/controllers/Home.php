@@ -9,6 +9,7 @@ class Home extends CI_Controller {
         $this->load->model('Books_model');
         $this->load->model('User_model');
         $this->load->helper('text');
+
     }
 
     public function index(){
@@ -29,8 +30,23 @@ class Home extends CI_Controller {
         $data['book'] = $this->Books_model->bookAll();
         
         $this->load->view('home', $data);    
+    }
 
+    public function buku(){
+        // $data['buku'] = $this->Books_model->bookById($session_data['id_pengguna']);
+        // $this->load->view('partials/header-user');
+        // $this->load->view('writer_book',$data);        
+        // $this->load->view('partials/footer');
 
+        $session_data = $this->session->userdata('logged_in');
+        $data['role'] = $session_data['role'];
+
+        if ($session_data['role'] != 'user') { //Ini buat handle biar penulis doang yang bisa akses
+                redirect('writer','refresh');
+        }
+
+        $data['buku'] = $this->Books_model->bookById($session_data['id_pengguna']);
+        $this->load->view('writer_book',$data);
     }
 
 

@@ -1,5 +1,12 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 class Books_model extends CI_Model{
+
+	public function __construct()
+	{
+		parent::__construct();
+	}	
 
 	public function publish(){
 		
@@ -25,6 +32,8 @@ class Books_model extends CI_Model{
 		$query = $this->db->get();
 		return $query->result();
 	}
+
+	
 
 	public function bookById($id_writer){
 		

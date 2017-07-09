@@ -52,7 +52,7 @@
 			<!-- abel  -->
 			<h3>Download As</h3>
 			<div class="ui small basic icon buttons">
-				<a class="ui button"><i class="download icon"></i>PDF</a>
+				<a class="ui button" href="<?=site_url()?>/Cetak"><i class="download icon"></i>PDF</a>
 			</div>
 			
 		</div>

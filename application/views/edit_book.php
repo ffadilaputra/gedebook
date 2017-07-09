@@ -9,6 +9,7 @@
     $attr = array('class' => 'ui form');
     echo form_open_multipart('books/update/'.$this->uri->segment(3),$attr);
     ?>
+
     <div class="field">
       <label>Title</label>
       <input type="text" name="title" placeholder="Ttile" value="<?php echo $buku[0]->judul; ?>">
@@ -45,7 +46,7 @@
       <button class="ui button primary" type="submit">Submit</button>
     </div>
     <br>
-    <?php echo form_close() ?>
+    <?php echo form_close(); ?>
     <?php echo validation_errors(); ?>
   </div>
 </div>
