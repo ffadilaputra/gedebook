@@ -16,11 +16,6 @@ class Books extends CI_Controller
             $data['username'] = $session_data['username'];
             $data['nama'] = $session_data['nama'];
             $data['role'] = $session_data['role'];
-
-  //       if ($session_data['role'] != 'writer') {
-  //           	redirect('user','refresh');
-		// }
-
         }else{
             redirect('login','refresh');
         }
