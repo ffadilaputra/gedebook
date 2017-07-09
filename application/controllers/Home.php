@@ -42,11 +42,12 @@ class Home extends CI_Controller {
         $data['role'] = $session_data['role'];
 
         if ($session_data['role'] != 'user') { //Ini buat handle biar penulis doang yang bisa akses
-                redirect('writer','refresh');
-        }
-
+                // redirect('writer','refresh');
+        
         $data['buku'] = $this->Books_model->bookById($session_data['id_pengguna']);
         $this->load->view('writer_book',$data);
+        }
+
     }
 
 
