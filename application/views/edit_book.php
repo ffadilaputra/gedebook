@@ -24,7 +24,7 @@
     </div>
     <div class="field">
       <label>Subjects</label>
-      <select name="subjects[]" class="ui fluid dropdown" multiple="" value="<?php echo $buku[0]->genre; ?>">
+      <select name="subjects" class="ui fluid dropdown" multiple="" ">
         <option value="horror">Horror</option>
         <option value="comedy">Comedy</option>
         <option value="romance">Romance</option>

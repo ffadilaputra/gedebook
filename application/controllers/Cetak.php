@@ -10,9 +10,9 @@ class Cetak extends CI_Controller {
 		$this->load->helper('url','file');
 	}
 
-	public function index(){
-		$data['u']=$this->Cetak_model->getIdBuku($id);
-		$data['buku']=$this->Cetak_model->view();
+	public function index($id){
+		$data['buku']=$this->Cetak_model->getIdBuku($id);
+	
 		$this->load->view('preview_buku', $data);
 	}
 

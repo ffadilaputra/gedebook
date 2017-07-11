@@ -10,10 +10,11 @@ class Review extends CI_Controller {
 		$this->load->model('Review_model');
 	}
 	
-	public function reply(){
-		$this->Review_model->reply();
-		redirect('home','refresh');
-	}
+	// public function reply(){
+	// 	$a = $this->uri->segment(3);
+	// 	$this->Review_model->reply();
+	// 	redirect('books/details/'.$this->uri->segment());	
+	// }
 
 	public function allComment(){
 		// $this->load->model('Review_model');

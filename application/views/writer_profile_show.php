@@ -1,4 +1,4 @@
-<?php $this->load->view('partials/header') ?>
+
 <br>
 <div class="ui middle">
   <div class="ui container">
@@ -35,4 +35,3 @@
     </div>
   </div>
 </div>
-<?php $this->load->view('partials/footer') ?>

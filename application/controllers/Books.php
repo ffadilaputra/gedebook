@@ -79,8 +79,15 @@ class Books extends CI_Controller
 		$data['like']     = $this->Like_model->count_like($id);
 		$data['book']     = $this->Books_model->detailById($id);
 		$data['buku']	  = $this->Cetak_model->getIdBuku($id);
-		$this->load->view('detail_book',$data);
+		$this->form_validation->set_rules('reply','reply','trim|required');
+		if ($this->form_validation->run() === FALSE) {
+			$this->load->view('detail_book',$data);
+		}else {
+		
+		$this->Review_model->reply();
+		redirect($this->uri->uri_string());	
 	}
+}
 
 	public function update($id){
 		$session_data = $this->session->userdata('logged_in');

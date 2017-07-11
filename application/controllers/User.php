@@ -39,8 +39,25 @@ class User extends CI_Controller
 		$this->load->model('Books_model');
 
 		$data['books']   = $this->Books_model->bookById($id);
-		$data['profile'] = $this->User_model->getProfil($id);
-		$this->load->view('writer_profile_show',$data);
+				$data['profile'] = $this->User_model->getProfil($id);
+
+		if($this->session->userdata('logged_in')){
+			$session_data= $this->session->userdata('logged_in');
+
+			if ($session_data['role'] === 'writer') {
+				
+    			$this->load->view('partials/header-penulis');
+				$this->load->view('writer_profile_show',$data);
+				$this->load->view('partials/footer');
+    		}elseif($session_data['role'] === 'user'){
+    			
+    			$this->load->view('partials/header-user');
+    			$this->load->view('writer_profile_show',$data);;
+				$this->load->view('partials/footer');
+    		}
+		}else{
+			redirect('login','refresh');
+		}	
 	}
 
 	public function browse(){

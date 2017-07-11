@@ -56,7 +56,7 @@ class Books_model extends CI_Model{
 			'penulis' => $this->input->post('writer'),
 			'img' => $this->upload->data('file_name'),
 			'penerbit' => $this->input->post('publisher'),
-			'genre' => $arr_genre,
+			'genre' => $this->input->post('subjects'),
 			'sinopsis' => $this->input->post('synopsys'),
 			'posted_by' => $this->input->post('posted_by')
 		);

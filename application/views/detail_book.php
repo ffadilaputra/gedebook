@@ -89,18 +89,18 @@
 								<span class="date">at <?= $data->comment_at ?>
 									<?php if($data->id_pengguna == $session_data['id_pengguna']): ?>
 									<a href="<?= base_url('review/del') ?>/<?= $data->id_comment ?>" class="reply">Delete</a>
-									<?php endif; ?>
+									<?php endif; ?>	
 								</span>
 							</div>
 							<div class="text">
-								<?= $data->komentar ?>
+								<?= $data->keterangan ?>
 							</div>
 						</div>
 					</div>
 					<?php endforeach; ?>
 					<?php
 						$attr = array('class' => 'ui reply form');
-						echo form_open('review/reply',$attr);
+						echo form_open('books/details/'.$this->uri->segment(3),$attr);
 					?>
 					<div class="field">
 						<input type="hidden" name="id_buku" value="<?= $book[0]->kd_buku ?>">
