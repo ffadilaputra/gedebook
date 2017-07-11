@@ -15,7 +15,6 @@ class Review_model extends CI_Model{
 	}
 
 	public function getComment($id_buku){
-
 		$this->db->select('*');
 		$this->db->from('comment');
 		$this->db->where('kd_buku',$id_buku);
