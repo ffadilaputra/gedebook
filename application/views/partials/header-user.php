@@ -10,11 +10,10 @@ $data['ava'] = $session_data['ava'];
         <meta charset="utf-8">
         <title>Gedebook</title>
         <link rel="stylesheet" href="<?php echo base_url('semantic/dist/semantic.min.css') ?>">
-<<<<<<< HEAD
+
         <link rel="icon" href="<?php echo base_url('/assets/img/gedebook.png'); ?> ">
-=======
+
         
->>>>>>> 58675074c1b33f0702128c1107f77a3e1bed46b0
     </head>
     <body>
         <div class="ui attached stackable menu">
