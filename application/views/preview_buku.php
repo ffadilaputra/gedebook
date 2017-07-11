@@ -72,7 +72,7 @@
 			</tr>
 			<?php }?>
 		</table>
-		<p style="text-align: center"><a href="<?php echo base_url()?>index.php/Cetak/cetakBuku">Cetak PDF</a></p>
+		<p style="text-align: center"><a href="<?php echo base_url()?>index.php/Cetak/cetakBuku/<?php 	echo $key->kd_buku ?>">Cetak PDF</a></p>
 		
 </body>
 </html>

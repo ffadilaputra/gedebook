@@ -27,11 +27,11 @@
       <!-- abel  -->
       <div class="ui blue labels">
         <a class="ui label">
-          Fun <i class="icon close"></i>
+          Fun 
         </a>
         <a class="ui label">
           Happy
-          <div class="detail">22</div>
+          <div class="detail"></div>
         </a>
         <a class="ui label">
           Smart

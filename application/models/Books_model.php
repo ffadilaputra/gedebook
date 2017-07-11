@@ -29,7 +29,6 @@ class Books_model extends CI_Model{
 	}
 
 	
-
 	public function bookById($id_writer){
 		
 		$this->db->where('posted_by',$id_writer);

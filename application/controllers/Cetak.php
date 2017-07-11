@@ -16,8 +16,8 @@ class Cetak extends CI_Controller {
 		$this->load->view('preview_buku', $data);
 	}
 
-	public function cetakBuku(){
-		$data['buku']=$this->Cetak_model->view();
+	public function cetakBuku($id){
+		$data['buku']=$this->Cetak_model->getIdBuku($id);
 		$this->load->view('print_buku', $data);
 		$paper_size = 'A4';
 		$orientation = 'landscape';
