@@ -11,6 +11,7 @@ class Cetak extends CI_Controller {
 	}
 
 	public function index(){
+		$data['u']=$this->Cetak_model->getIdBuku($id);
 		$data['buku']=$this->Cetak_model->view();
 		$this->load->view('preview_buku', $data);
 	}

@@ -8,6 +8,12 @@ class Cetak_model extends CI_Model {
 		return $query->result();
 	}
 
+	public function getIdBuku($id){
+		$this->db->where('kd_buku',$id);
+		$query = $this->db->get('buku');
+		return $query->result();
+	}
+
 	
 
 	
