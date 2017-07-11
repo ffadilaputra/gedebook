@@ -48,7 +48,7 @@
       <h3>Writer</h3>
      <?php foreach($uwer as $a): ?>
       <!-- href: nampilin list buku dr id yg dipilih -->
-      <a class="ui image label" href="<?php echo base_url('home/buku') ?>/<?php echo $a->id_pengguna ?>">
+      <a class="ui image label" href="<?php echo base_url('user/us') ?>/<?php echo $a->id_pengguna ?>">
         <img src="<?= base_url('assets/uploads') ?>/<?= $a->ava ?>" class="hoverZoomLink">
         <?= $a->nama ?>
       </a>

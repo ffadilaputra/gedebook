@@ -8,6 +8,7 @@ class User extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->helper('text');
 		if ($this->session->userdata('logged_in')) {
             $session_data = $this->session->userdata('logged_in');
             $data['username'] = $session_data['username'];
@@ -27,12 +28,19 @@ class User extends CI_Controller
 	}
 
 	public function profile(){
-
 		$this->load->model('User_model');
 		$session_data = $this->session->userdata('logged_in');
-
 		$data['profile'] = $this->User_model->getProfil($session_data['id_pengguna']);
 		$this->load->view('user_profile',$data);
+	}
+
+	public function us($id){
+		$this->load->model('User_model');
+		$this->load->model('Books_model');
+
+		$data['books']   = $this->Books_model->bookById($id);
+		$data['profile'] = $this->User_model->getProfil($id);
+		$this->load->view('writer_profile_show',$data);
 	}
 
 	public function browse(){

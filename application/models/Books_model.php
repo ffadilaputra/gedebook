@@ -3,11 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Books_model extends CI_Model{
 
-	public function __construct()
-	{
-		parent::__construct();
-	}	
-
 	public function publish(){
 		
 		$arr_genre = implode(',',$this->input->post('subjects')); // Inputan Array

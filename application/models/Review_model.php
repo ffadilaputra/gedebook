@@ -18,6 +18,7 @@ class Review_model extends CI_Model{
 
 		$this->db->select('*');
 		$this->db->from('comment');
+		$this->db->where('kd_buku',$id_buku);
 		$this->db->join('pengguna','pengguna.id_pengguna = comment.id_pengguna','left');
 		$query = $this->db->get();
 		return $query->result();
