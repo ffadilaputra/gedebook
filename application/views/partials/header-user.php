@@ -25,8 +25,7 @@ $data['ava'] = $session_data['ava'];
                 </a>
                 
                 <div class="right item">
-<!--                     <a class="ui button primary" href="<?php echo base_url('books/create') ?>">Ngapain</a>
- -->                    <div class="ui simple dropdown item">
+                    <div class="ui simple dropdown item">
                         <img class="ui avatar image" src="<?php echo base_url('assets/uploads') ?>/<?= $session_data['ava']; ?>">
                         Hello,<span><?= $session_data['username']; ?></span>
                         <i class="dropdown icon"></i>
@@ -48,6 +47,7 @@ $data['ava'] = $session_data['ava'];
                                         <i class="remove icon"></i>
                                         No
                                     </div>
+                                    
                                     <a class="ui green ok inverted button" href="<?php echo base_url('auth/logout') ?>"><i class="checkmark icon"></i>Logout</a>
                                 </div>
                             </div>

@@ -46,8 +46,7 @@ class Auth extends CI_Controller
 
 	}
 
-	public function cekDb($password)
-	{
+	public function cekDb($password){
 		$user = $this->input->post('username');
 		$result = $this->User_model->login($user,$password);
 
