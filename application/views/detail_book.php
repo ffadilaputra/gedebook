@@ -53,7 +53,7 @@
 			<h3>Download As</h3>
 			<?php foreach ($buku as $key):?>
 			<div class="ui small basic icon buttons">
-				<a class="ui button" href="<?php echo base_url('index.php/cetak/index/');?>/<?php 	echo $key->kd_buku ?>"><i class="download icon"></i>PDF</a>
+				<a class="ui button" href="<?php echo base_url('index.php/cetak/index');?>/<?php echo $key->kd_buku ?>"><i class="download icon"></i>PDF</a>
 			</div>
 			<?php endforeach; ?>
 			

@@ -37,6 +37,13 @@ class Books extends CI_Controller
 		$this->load->view('books_creator',$data);
 	}
 
+	public function browse(){
+
+		$data['all'] = $this->Books_model->bookAll();
+
+		$this->load->view('books_search',$data);
+	}
+
 	public function create(){
 
 		$session_data = $this->session->userdata('logged_in');
