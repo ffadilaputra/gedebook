@@ -22,10 +22,7 @@
 			</div>
 			<p></p>
 			
-			<?php if($filter[0]->id_pengguna == $session_data['id_pengguna'] ): ?>
-				UNLIKE
-			<?php else: ?>
-				<!-- Proses Like -->
+			<!-- Proses Like -->
 			<?= form_open('like') ?>
 			<div class="ui labeled button" tabindex="0">
 				<input type="hidden" value="<?= $book[0]->kd_buku ?>" name="kd_buku">
@@ -39,8 +36,6 @@
 			</div>
 			<?= form_close() ?>
 			<!-- Proses Like -->
-			<?php endif; ?>	
-
 			<!-- abel  -->
 			<h3> Book Category </h3>
 			<div class="ui blue labels">
@@ -56,9 +51,11 @@
 			</div>
 			<!-- abel  -->
 			<h3>Download As</h3>
+			<?php 	foreach ($buku as $key):?>
 			<div class="ui small basic icon buttons">
-				<a class="ui button"><i class="download icon"></i>PDF</a>
+				<a class="ui button" href="<?php echo base_url('index.php/cetak');?>/<?php 	echo $key->kd_buku ?>"><i class="download icon"></i>PDF</a>
 			</div>
+			<?php 	endforeach; ?>
 			
 		</div>
 		<div class="eight wide column">

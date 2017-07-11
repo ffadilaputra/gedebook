@@ -25,7 +25,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- abel  -->
+			<!-- Label  -->
 			<div class="ui blue labels">
 				<a class="ui label">
 					Fun <i class="icon close"></i>
