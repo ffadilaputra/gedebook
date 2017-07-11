@@ -8,6 +8,7 @@ class Home extends CI_Controller {
         parent::__construct();
         $this->load->model('Books_model');
         $this->load->model('User_model');
+        $this->load->model('Review_model');
         $this->load->helper('text');
 
     }
@@ -25,7 +26,8 @@ class Home extends CI_Controller {
     	}else{
     		$this->load->view('partials/header');
     	}
-	       	
+	    
+        $data['feed'] = $this->Review_model->getRecent();   	
         $data['uwer'] = $this->User_model->getWriter();
         $data['book'] = $this->Books_model->bookAll();
         

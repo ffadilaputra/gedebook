@@ -6,53 +6,42 @@
         <div class="item">
           <div class="header">New Releases</div>
           <div class="menu">
-            <a class="item">Test</a>
+            <?php foreach($book as $ayy): ?>
+            <div class="ui divided selection list">
+              <a href="<?= base_url('books/details/')?><?= $ayy->kd_buku ?>" class="item">
+                <div class="ui red horizontal label"><?= $ayy->judul ?></div>
+                <?= $ayy->posted_date ?>
+              </a>
+            </div>
+            <?php endforeach; ?>
           </div>
         </div>
         <div class="item">
-          <div class="header">Category</div>
-          <div class="menu">
-            <a class="item">Horror</a>
-            <a class="item">Mystery</a>
-            <a class="item">Myth</a>
-          </div>
-        </div>
-        <div class="item">
-          <div class="header">Popular</div>
-          <div class="menu">
-            <a class="item">Kunam</a>
+          <div class="ui small feed">
+            <h4 class="ui header">Recent Activity</h4>
+            <div class="event">
+              <div class="content">
+                <?php foreach($feed as $vue): ?>
+                <div class="summary">
+                  <a href="<?= base_url('user/us') ?>/<?php echo $vue->id_pengguna ?>"><?= $vue->nama ?></a> comments on <a href="<?= base_url('books/details') ?>/<?php echo $vue->kd_buku ?>"><?= $vue->judul ?></a>
+                  <br>
+                  <br>
+                </div>
+                <?php endforeach; ?>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- abel  -->
-      <div class="ui blue labels">
-        <a class="ui label">
-          Fun 
-        </a>
-        <a class="ui label">
-          Happy
-          <div class="detail"></div>
-        </a>
-        <a class="ui label">
-          Smart
-        </a>
-        <a class="ui label">
-          Insane
-        </a>
-        <a class="ui label">
-          Exciting
-        </a>
-      </div> 
-      <!-- abel  -->
       <!-- writer -->
       <h3>Writer</h3>
-     <?php foreach($uwer as $a): ?>
+      <?php foreach($uwer as $a): ?>
       <!-- href: nampilin list buku dr id yg dipilih -->
       <a class="ui image label" href="<?php echo base_url('user/us') ?>/<?php echo $a->id_pengguna ?>">
         <img src="<?= base_url('assets/uploads') ?>/<?= $a->ava ?>" class="hoverZoomLink">
         <?= $a->nama ?>
       </a>
-      <?php endforeach; ?>  
+      <?php endforeach; ?>
       <!-- writer -->
     </div>
     <div class="eleven wide column">

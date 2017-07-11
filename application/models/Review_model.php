@@ -23,6 +23,16 @@ class Review_model extends CI_Model{
 		return $query->result();
 	}
 
+	public function getRecent(){
+		$this->db->select('*');
+		$this->db->from('comment');
+		$this->db->join('pengguna','pengguna.id_pengguna = comment.id_pengguna');
+		$this->db->join('buku','buku.kd_buku = comment.kd_buku');
+		$this->db->limit(5);
+		$query = $this->db->get();
+		return $query->result();
+	}
+
 	public function delComment($id){
 		$this->db->where('id_comment',$id);
 		$delete = $this->db->delete('comment');

@@ -1,8 +1,19 @@
-<?php $this->load->view('partials/header-user');
+<?php 
+
 	if ($this->session->userdata('logged_in')) {
 	$session_data = $this->session->userdata('logged_in');
-	$data['username'] = $session_data['id_pengguna'];
+	$data['id_pengguna'] = $session_data['id_pengguna'];
 	$data['ava'] = $session_data['ava'];
+	$data['role'] = $session_data['role'];
+
+	if ($data['role'] == 'writer') {
+		$this->load->view('partials/header-penulis');
+	}elseif($data['role'] == 'user'){	
+		$this->load->view('partials/header-user');
+	}else{
+		$this->load->view('partials/header');
+	}
+
 }
 ?>
 <h3 class="ui center aligned header"></h3>
@@ -84,7 +95,7 @@
 							<img src="<?= base_url('assets/uploads') ?>/<?= $data->ava ?>">
 						</a>
 						<div class="content">
-							<a class="author"><?= $data->username ?></a>
+							<a href="<?php echo base_url('user/us') ?>/<?php echo $data->id_pengguna ?>" class="author"><?= $data->username ?></a>
 							<div class="metadata">
 								<span class="date">at <?= $data->comment_at ?>
 									<?php if($data->id_pengguna == $session_data['id_pengguna']): ?>
