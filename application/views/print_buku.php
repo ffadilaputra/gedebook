@@ -26,7 +26,7 @@
 		<tr>
 			<!-- <td colspan="1" style="border:0px"></td> -->
 			<td colspan="" align="center" style="border: 0px"><br><br>
-			<img src="assets/img/cashier.png" width="100" height="100" alt="">
+			<img src="assets/img/gedebook.png" width="100" height="100" alt="">
 			</td>
 
 			<td colspan="" style="text-align: left; border: 0px">
@@ -42,7 +42,7 @@
 		<tr>
 			<td colspan="6" style="border:0px">
 				<hr size="3" style="background-color: black"></hr><br><br>
-				<h2 style="text-align: center">Daftar Produk</h2>
+				<h2 style="text-align: center">Detail Buku</h2>
 			</td>	
 		</tr>
 		

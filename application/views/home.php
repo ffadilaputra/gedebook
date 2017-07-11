@@ -42,7 +42,7 @@
         <a class="ui label">
           Exciting
         </a>
-      </div>
+      </div> 
       <!-- abel  -->
       <!-- writer -->
       <h3>Writer</h3>

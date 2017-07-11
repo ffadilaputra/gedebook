@@ -27,7 +27,7 @@
 		<tr>
 			<!-- <td colspan="" style="border:0px"></td> -->
 			<td colspan="" align="center" style="border: 0px"><br><br>
-			<img src="<?php echo base_url('/assets/img/cashier.png'); ?>" alt="" align="center" width="100" height="100"> 
+			<img src="<?php echo base_url('/assets/img/gedebook.png'); ?>" alt="" align="center" width="100" height="100"> 
 			</td>
 
 			<td colspan="" style="text-align: left; border: 0px">
@@ -43,7 +43,7 @@
 		<tr>
 			<td colspan="7" style="border:0px">
 				<hr size="3" style="background-color: black"></hr>
-				<h2 style="text-align: center">Daftar Produk</h2>
+				<h2 style="text-align: center">Detail Buku</h2>
 			</td>	
 		</tr>
 

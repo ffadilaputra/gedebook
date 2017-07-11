@@ -8,8 +8,9 @@ $data['ava'] = $session_data['ava'];
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>:)</title>
+        <title>Gedebook</title>
         <link rel="stylesheet" href="<?php echo base_url('semantic/dist/semantic.min.css') ?>">
+        <link rel="icon" href="<?php echo base_url('/assets/img/gedebook.png'); ?> ">
     </head>
     <body>
         <div class="ui attached stackable menu">
