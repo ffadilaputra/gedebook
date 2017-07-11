@@ -8,13 +8,14 @@ class Books_model extends CI_Model{
 		$arr_genre = implode(',',$this->input->post('subjects')); // Inputan Array
 		
 		$data = array(
-			'judul' => $this->input->post('title'),
-			'penulis' => $this->input->post('writer'),
-			'img' => $this->upload->data('file_name'),
-			'penerbit' => $this->input->post('publisher'),
-			'genre' => $arr_genre,
-			'sinopsis' => $this->input->post('synopsys'),
-			'posted_by' => $this->input->post('posted_by')
+			'judul' 	  => $this->input->post('title'),
+			'penulis'     => $this->input->post('writer'),
+			'img' 		  => $this->upload->data('file_name'),
+			'penerbit'    => $this->input->post('publisher'),
+			'genre' 	  => $arr_genre,
+			'sinopsis' 	  => $this->input->post('synopsys'),
+			'posted_by'   => $this->input->post('posted_by'),
+			'posted_date' => date("Y-m-d") 
 		);
 		$this->db->insert('buku',$data);
 	}
@@ -24,6 +25,7 @@ class Books_model extends CI_Model{
 		$this->db->select('*');
 		$this->db->from('buku');
 		$this->db->join('pengguna','pengguna.id_pengguna = buku.posted_by','left');
+		$this->db->order_by('posted_date','ASC');	
 		$query = $this->db->get();
 		return $query->result();
 	}

@@ -6,10 +6,10 @@ class Review_model extends CI_Model{
 	
 	public function reply(){
 		$data = array(
-			'keterangan' => $this->input->post('reply'),
+			'komentar'    => $this->input->post('reply'),
 			'id_pengguna' => $this->input->post('id_user'),
-			'kd_buku' => $this->input->post('id_buku'),
-			
+			'kd_buku'     => $this->input->post('id_buku'),
+			'comment_at'  => date("h:i:sa")
 		);
 		$this->db->insert('comment',$data);
 	}

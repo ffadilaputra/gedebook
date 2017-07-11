@@ -10,7 +10,11 @@ $data['ava'] = $session_data['ava'];
         <meta charset="utf-8">
         <title>Gedebook</title>
         <link rel="stylesheet" href="<?php echo base_url('semantic/dist/semantic.min.css') ?>">
+<<<<<<< HEAD
         <link rel="icon" href="<?php echo base_url('/assets/img/gedebook.png'); ?> ">
+=======
+        
+>>>>>>> 58675074c1b33f0702128c1107f77a3e1bed46b0
     </head>
     <body>
         <div class="ui attached stackable menu">
@@ -21,7 +25,7 @@ $data['ava'] = $session_data['ava'];
                 <a href="<?= base_url()  ?>" class="item">
                     <i class="home icon"></i> Home
                 </a>
-                <a href="<?= base_url('user/browse')  ?>" class="item">
+                <a href="<?= base_url('books/browse')  ?>" class="item">
                     <i class="grid layout icon"></i> Browse Book
                 </a>
                 
@@ -32,7 +36,7 @@ $data['ava'] = $session_data['ava'];
                         <i class="dropdown icon"></i>
                         <div class="menu">
                             <a href="<?php echo base_url('user/profile') ?>" class="item"><i class="edit icon"></i> Edit Profile</a>
-                            <a class="item"><i class="settings icon"></i> Logout</a>
+                            <a id="logout" class="item"><i class="settings icon"></i> Logout</a>
                             <!-- Modal -->
                             <div class="ui basic modal">
                                 <div class="ui icon header">

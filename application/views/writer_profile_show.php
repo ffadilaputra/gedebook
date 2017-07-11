@@ -24,7 +24,7 @@
             <div class="item">
               <i class="large book middle aligned icon"></i>
               <div class="content">
-                <a class="header"><?= $mamam->judul ?></a>
+                <a href="<?= base_url('books/details/') ?><?= $mamam->kd_buku ?>" class="header"><?= $mamam->judul ?></a>
                 <div class="description"><?= character_limiter($mamam->sinopsis,20) ?></div>
               </div>
             </div>

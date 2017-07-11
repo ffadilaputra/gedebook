@@ -39,7 +39,7 @@ class User extends CI_Controller
 		$this->load->model('Books_model');
 
 		$data['books']   = $this->Books_model->bookById($id);
-				$data['profile'] = $this->User_model->getProfil($id);
+		$data['profile'] = $this->User_model->getProfil($id);
 
 		if($this->session->userdata('logged_in')){
 			$session_data= $this->session->userdata('logged_in');

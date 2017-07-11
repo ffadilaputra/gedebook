@@ -21,7 +21,7 @@ $data['ava'] = $session_data['ava'];
                 <a href="<?= base_url()  ?>" class="item">
                     <i class="home icon"></i> Home
                 </a>
-                <a class="item">
+                <a href="<?php echo base_url('books/browse') ?>" class="item">
                     <i class="grid layout icon"></i> Browse
                 </a>
                 <a href="<?php echo base_url('books') ?>" class="item">
@@ -35,7 +35,7 @@ $data['ava'] = $session_data['ava'];
                         <i class="dropdown icon"></i>
                         <div class="menu">
                             <a href="<?php echo base_url('writer/profile') ?>" class="item"><i class="edit icon"></i> Edit Profile</a>
-                            <a class="item"><i class="settings icon"></i> Logout</a>
+                            <a id="logout" class="item"><i class="settings icon"></i> Logout</a>
                             <!-- Modal -->
                             <div class="ui basic modal">
                                 <div class="ui icon header">

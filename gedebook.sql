@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 11 Jul 2017 pada 12.58
+-- Generation Time: 11 Jul 2017 pada 17.59
 -- Versi Server: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -34,18 +34,19 @@ CREATE TABLE `buku` (
   `penerbit` varchar(255) NOT NULL,
   `genre` varchar(255) NOT NULL,
   `sinopsis` varchar(255) NOT NULL,
-  `posted_by` int(20) NOT NULL
+  `posted_by` int(20) NOT NULL,
+  `posted_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `buku`
 --
 
-INSERT INTO `buku` (`kd_buku`, `judul`, `penulis`, `img`, `penerbit`, `genre`, `sinopsis`, `posted_by`) VALUES
-(2, 'Laskar Laskaran', 'Najwa Rahma Putra', 'NULL', 'Ivan Corp.', 'horror', 'I would like to set a couple of session variables when I click an image on the page. The session variables will be equal to textboxes on the same page as the image: Here is the tag for the image.', 9),
-(5, 'Game Of Thrones', 'Najwa Rahma Putra', 'buku_got.jpg', 'George G Martin', 'horror', 'Adaptasi dari A Song of Ice and Fire, sebuah novel serial fantasi karya George R. R. Martin, yang edisi pertamanya berjudul A Game of Thrones. Difilmkan di sebuah studi Belfast dan lokasi pengambilan gambarnya dilakukan di Irlandia Utara, Malta, Skotlandi', 9),
-(6, 'Laskar Pelangi', 'Najwa Rahma Putra', 'buku_lp1.jpg', 'Ivan Corp.', 'life', 'Laskar Pelangi merupakan buku pertama dari Tetralogi Laskar Pelangi. Buku berikutnya adalah Sang Pemimpi, Edensor dan Maryamah Karpov. Buku ini tercatat sebagai buku sastra Indonesia terlaris sepanjang sejarah.\r\n\r\nCerita terjadi di desa Gantung, Belitung', 9),
-(17, 'Maze Runner', 'Salsabiela Cahyahaq', 'maze.jpg', 'Kan Main Bang', 'comedy', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dol', 13);
+INSERT INTO `buku` (`kd_buku`, `judul`, `penulis`, `img`, `penerbit`, `genre`, `sinopsis`, `posted_by`, `posted_date`) VALUES
+(5, 'Game Of Thrones', 'Najwa Rahma Putra', 'buku_got.jpg', 'George G Martin', 'horror', 'Adaptasi dari A Song of Ice and Fire, sebuah novel serial fantasi karya George R. R. Martin, yang edisi pertamanya berjudul A Game of Thrones. Difilmkan di sebuah studi Belfast dan lokasi pengambilan gambarnya dilakukan di Irlandia Utara, Malta, Skotlandi', 9, '2017-07-11'),
+(6, 'Laskar Pelangi', 'Najwa Rahma Putra', 'buku_lp1.jpg', 'Ivan Corp.', 'life', 'Laskar Pelangi merupakan buku pertama dari Tetralogi Laskar Pelangi. Buku berikutnya adalah Sang Pemimpi, Edensor dan Maryamah Karpov. Buku ini tercatat sebagai buku sastra Indonesia terlaris sepanjang sejarah.\r\n\r\nCerita terjadi di desa Gantung, Belitung', 9, '2017-07-02'),
+(17, 'Maze Runner', 'Salsabiela Cahyahaq', 'maze.jpg', 'Kan Main Bang', 'comedy', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dol', 13, '2017-07-03'),
+(18, 'Bunga Di Tepi Jalan', 'Salsabiela Cahyahaq', 'Orange-Background-Wallpaper.jpg', 'Semenanjung Malaya Corp', 'fiksi', 'Tidak seperti anggapan banyak orang, Lorem Ipsum bukanlah teks-teks yang diacak. Ia berakar dari sebuah naskah sastra latin klasik dari era 45 sebelum masehi, hingga bisa dipastikan usianya telah mencapai lebih dari 2000 tahun. Richard McClintock, seorang', 13, '2017-07-11');
 
 -- --------------------------------------------------------
 
@@ -71,7 +72,8 @@ INSERT INTO `comment` (`id_comment`, `komentar`, `id_pengguna`, `kd_buku`, `comm
 (5, 'Komen bang', 9, 2, '07:19:54'),
 (6, 'Makan Bang', 8, 2, '08:49:27'),
 (7, 'Makan', 8, 5, '08:59:44'),
-(8, 'hai', 9, 6, '12:10:47');
+(8, 'hai', 9, 6, '12:10:47'),
+(9, 'Hahahaha', 8, 6, '00:00:00');
 
 -- --------------------------------------------------------
 
@@ -202,12 +204,12 @@ ALTER TABLE `upload`
 -- AUTO_INCREMENT for table `buku`
 --
 ALTER TABLE `buku`
-  MODIFY `kd_buku` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `kd_buku` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id_comment` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_comment` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `like`
 --
