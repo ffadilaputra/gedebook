@@ -15,7 +15,7 @@
         </div>
         <div class="field">
           <label>Email</label>
-          <input type="text" name="email" placeholder="Email">
+          <input type="email" name="email" placeholder="Email">
         </div>
         <div class="field">
           <label>Gender</label>
