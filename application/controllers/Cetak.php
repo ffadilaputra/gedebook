@@ -38,7 +38,12 @@ class Cetak extends CI_Controller {
 		$this->load->view('print_excel',$data);
  	}
 
-	
+	public function cetakWord()
+ 	{
+ 		$data = array( 'title' => 'Buku Word',
+		'buku' => $this->Cetak_model->view());
+		$this->load->view('print_word',$data);
+ 	}
 
 
 }

@@ -69,6 +69,9 @@
 			<div class="ui small basic icon buttons">
 				<a class="ui button" href="<?php echo base_url('index.php/cetak/cetakExcel');?>/<?php echo $key->kd_buku ?>"><i class="download icon"></i>EXCEL</a>
 			</div>
+			<div class="ui small basic icon buttons">
+				<a class="ui button" href="<?php echo base_url('index.php/cetak/cetakWord');?>/<?php echo $key->kd_buku ?>"><i class="download icon"></i>WORD</a>
+			</div>
 			<?php endforeach; ?>
 			
 		</div>

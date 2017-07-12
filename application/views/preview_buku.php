@@ -74,7 +74,7 @@
 		</table>
 		<p style="text-align: center"><a href="<?php echo base_url()?>index.php/Cetak/cetakBuku/<?php 	echo $key->kd_buku ?>">Cetak PDF</a></p><br>
 		<p style="text-align: center"><a href="<?php echo base_url()?>index.php/Cetak/cetakExcel/<?php 	echo $key->kd_buku ?>">Cetak EXCEL</a></p>
-		
+		<p style="text-align: center"><a href="<?php echo base_url()?>index.php/Cetak/cetakWord/<?php 	echo $key->kd_buku ?>">Cetak WORD</a></p>
 </body>
 </html>
 

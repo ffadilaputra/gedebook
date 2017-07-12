@@ -1,12 +1,7 @@
 <?php 
 
-header("Content-type: application/octet-stream");
-
-header("Content-Disposition: attachment; filename=$title.xls");
-
-header("Pragma: no-cache");
-
-header("Expires: 0");
+header("Content-type: application/vnd.ms-word");
+header("Content-Disposition: attachment;Filename=document_name.doc");
 
 ?>
 
