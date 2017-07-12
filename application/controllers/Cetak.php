@@ -31,6 +31,13 @@ class Cetak extends CI_Controller {
 		unset($dompdf);
 	}
 
+	public function cetakExcel()
+ 	{
+ 		$data = array( 'title' => 'Buku Excel',
+		'buku' => $this->Cetak_model->view());
+		$this->load->view('print_excel',$data);
+ 	}
+
 	
 
 

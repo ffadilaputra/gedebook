@@ -13,9 +13,6 @@ class Cetak_model extends CI_Model {
 		$query = $this->db->get('buku');
 		return $query->result();
 	}
-
-	
-
 	
 	
 
